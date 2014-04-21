@@ -13,6 +13,7 @@ a{
 	background-image:url('../images/iphone.png'); 
 	width:387px; 
 	height:800px;
+
 }
 #iphone-embeded{
 	width:320px; height:568px; margin-top:117px; margin-left:34px;
@@ -24,8 +25,11 @@ a{
 	left: 0px;
 	width: 320px;
 	height: 548px;
-	background-color: rgba(242,242,242,1);
+	background-color: rgba(255,255,255,1);
 	overflow: hidden;
+}
+.blur{
+	-webkit-filter: blur(6px);
 }
 .status-bar{
 	z-index: 2;
@@ -55,7 +59,7 @@ a{
 }
 .header p{
 	float: left;
-	margin: 15px auto 10px 85px;
+	margin: 15px auto 10px 95px;
 	font-size: 17px;
 	font-family:Helvetica;
 	font-weight: 500;
@@ -67,50 +71,144 @@ a{
 	height: 455px;
 }
 
+#page-worm{
+	display: block;
+	background: #FFFFFF;
+}
+#page-worm .info{
+	width: 320px;
+	height: 49px;
+	margin: 0 0 0 0;
+	border-bottom: 1px solid #eeeeee;
+	padding: 0 0 0 0;
+}
+#page-worm .info .infotitle{
+	float: left;
+	font-family: .LucidaGrandeUI;
+	font-size: 15px;
+	color: #5C5C5C;
+	margin: 15px auto auto 20px;
+}
+#page-worm .info .infotext{
+	padding: 9px 20px 9px 20px;
+	border-radius: 10px;
+	font-family: .LucidaGrandeUI;
+	font-size: 13px;
+	color: #FFFFFF;
+	float: right;
+	margin: 8px 20px auto auto;
+}
+#page-worm .pic-worm{
+	width: 320px;
+	height: 140px;
+	margin-top: 20px;
+}
+#page-worm .pic-worm img{
+	width: 280px;
+	height: 140px;
+	margin-left: 20px;
+}
+#page-worm .quote-worm{
+	position: absolute;
+	right: 40px;
+	top: 340px;
+	color: white;
+	font-size: 12px;
+	font-weight: 200;
+	width: 80px;
+	height: 60px;
+}
+#page-worm .add-food{
+	width: 154px;
+	height: 30px;
+	position: absolute;
+	top: 420px;
+	right: 20px;
+}
+
+#page-worm .add-food p{
+	float: left;
+	font-size: 12px;
+	margin-right: 0;
+}
+#page-worm .add-food .btn-feed{
+	padding: 5px 10px 5px 10px;
+	border-radius: 5px;
+	font-family: .LucidaGrandeUI;
+	font-size: 13px;
+	color: #FFFFFF;
+	float: right;
+	margin: 8px 0 auto auto;
+}
+
+.orange{
+	background: #F5A623;
+}
+.blue{
+	background: #70BDF9;
+}	
+.green{
+	background: #7ACF18;
+}
+.deepblue{
+	background: #3892E3;
+}
+.red{
+	background: #F97070;
+}
 /*Footer Tab*/
 .footer-tab{
 	position: absolute;
+	z-index: 2;
 	left: 0px;
-	bottom: 0px;
+	top: 519px;
 	width: 320px;
 	height: 49px;
-	background: #007DB1;
+	background: rgba(0,125,177,1);
 	-moz-box-shadow:    0px 1px 2px 0px rgba(51,51,51,0.40);
 	-webkit-box-shadow: 0px 1px 2px 0px rgba(51,51,51,0.40);
 	box-shadow:         0px 1px 2px 0px rgba(51,51,51,0.40);	
 	color: white;
 	font-size: 15px;
 	text-align: center;
+	padding-left: 0px;
 }
 .footer-tab .tab{
 	float: left;
-	width: 100px;
+	margin-left: 5px;
+	padding-top: 5px;
+	width: 55px;
 	height: 100%;
 }
 .footer-tab .circle-tab{
-	margin:-40px 15px auto 15px;
-	background-color: rgba(65,105,140,1);
+	z-index: 13;
+	margin:-20px 0px auto 5px;
+	background-color: #007DB1;
 	float: left;
-	width: 80px;
-	height: 80px;
-	border-radius: 80px;
+	width: 60px;
+	height: 60px;
+	border-radius: 60px;
 	border: 4px solid rgba(255,255,255,0.8);
 }
 .footer-tab .tab img{
-	width: 32px;
-	height: 32px;
+	width: 20px;
+	height: 20px;
 	margin-top: 1px;
 }
 .footer-tab .tab p{
 	margin-top: 1px;
+	font-size: 12px;
+	font-weight: 200;
 }
+
 .footer-tab .circle-tab img{
-	width: 32px;
-	height: 32px;
-	margin-top: 15px;
+	width: 24px;
+	height: 24px;
+	margin-top: 10px;
 }
 .footer-tab .circle-tab p{
-	margin-top: 10px;
+	margin-top: 5px;
+	font-size: 12px;
 }
 
 .hidden-menu{
@@ -160,6 +258,61 @@ a{
 	-webkit-box-shadow: 0px -1px 0px 0px rgba(255,255,255,0.20);
 	box-shadow:         0px -1px 0px 0px rgba(255,255,255,0.20);;
 }
+
+.blur-bg{
+	z-index: 10;
+	width: 320px;
+	height: 546px;
+	position: absolute;
+	display: none;
+	top: 0;
+	left: 0;
+	background: rgba(220,220,220,0.6);
+}
+
+.start-booklist{
+	z-index: 11;
+}
+.start-booklist .start-book{
+	position: absolute;
+	width: 70px;
+	height: 85px;
+	text-align: center;
+	top:600px;
+}
+.start-booklist .start-book	img{
+	width: 50px;
+	height: 70px;
+	margin:10px 10px 0px 10px;
+}
+.start-booklist .start-book p{
+	font-size: 10px;
+	margin:10px 10px 10px 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*.flip {
