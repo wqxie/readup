@@ -1,4 +1,31 @@
 $(document).ready(function(){
+	$('.tab-lib').click(function(){
+		$('.tab').find('.tab-selected').removeClass('.tab-selected');
+		$(this).addClass('.tab-selected');
+		$('.content-page').hide();
+		$('#page-lib').show();
+	});
+	$('.tab-worm').click(function(){
+		$('.tab').find('.tab-selected').removeClass('.tab-selected');
+		$(this).addClass('.tab-selected');
+		$('.content-page').hide();
+		$('#page-worm').show();
+	});
+	$('.tab-news').click(function(){
+		$('.tab').find('.tab-selected').removeClass('.tab-selected');
+		$(this).addClass('.tab-selected');
+		$('.content-page').hide();
+		$('#page-news').show();
+	});
+	$('.tab-club').click(function(){
+		$('.tab').find('.tab-selected').removeClass('.tab-selected');
+		$(this).addClass('.tab-selected');
+		$('.content-page').hide();
+		$('#page-club').show();
+	});
+
+
+
 	$('.list-btn').click(function(){
 		if ($('.iphone-container').css("left")=='0px') {
 			$('.iphone-container').animate({left:'200px'});
@@ -26,7 +53,7 @@ $(document).ready(function(){
 			$('.blur-bg').show();
 			$('.iphone-container').addClass('blur');
 		}else{
-			$('.circle-tab img').attr("src", "./images/run.png");
+			$('.circle-tab img').attr("src", "./images/read.png");
 			$('.circle-tab p').html("Read");
 			var delay=0;
 			$('.start-booklist .start-book').each(function(){
@@ -46,6 +73,50 @@ $(document).ready(function(){
 		$(this).addClass('selected');
 	});
 	
+
+	$('.first-tab').click(function(){
+		if ($('.second-tab').hasClass('tab-bar-selected')) {
+			$('.second-tab').removeClass('tab-bar-selected');
+		}
+		if ($('.third-tab').hasClass('tab-bar-selected')) {
+			$('.third-tab').removeClass('tab-bar-selected');
+		}
+		if (!($('.first-tab').hasClass('tab-bar-selected'))) {
+			$('.first-tab').addClass('tab-bar-selected');
+		}
+		$('#mybook').show();
+		$('#suggestion').hide();
+		$('#wishlist').hide();
+	});
+	$('.second-tab').click(function(){
+		if ($('.first-tab').hasClass('tab-bar-selected')) {
+			$('.first-tab').removeClass('tab-bar-selected');
+		}
+		if ($('.third-tab').hasClass('tab-bar-selected')) {
+			$('.third-tab').removeClass('tab-bar-selected');
+		}
+		if (!($('.second-tab').hasClass('tab-bar-selected'))) {
+			$('.second-tab').addClass('tab-bar-selected');
+		}
+		$('#mybook').hide();
+		$('#suggestion').show();
+		$('#wishlist').hide();
+	});
+	$('.third-tab').click(function(){
+		if ($('.second-tab').hasClass('tab-bar-selected')) {
+			$('.second-tab').removeClass('tab-bar-selected');
+		}
+		if ($('.first-tab').hasClass('tab-bar-selected')) {
+			$('.first-tab').removeClass('tab-bar-selected');
+		}
+		if (!($('.third-tab').hasClass('tab-bar-selected'))) {
+			$('.third-tab').addClass('tab-bar-selected');
+		}
+		$('#mybook').hide();
+		$('#suggestion').hide();
+		$('#wishlist').show();
+	});
+
 	var quotes=["Let me think what to eat? Fiction? Novel?",
 	"To eat or not to eat, that is not a question",
 	"Hey! Read more books so that I have something to eat.",
@@ -60,7 +131,9 @@ $(document).ready(function(){
 		$('.info .status').addClass('green');
 		$('.info .status').text('Full');
 		$('.add-food p').text('Food: ' + pageno + ' pages left.');
+		$('.food').animate({right:'192px',top:'-66px'},500,function(){$('.food').css("opacity",0).css("right","48px").css("top","16px").css("opacity",1);});
 		pageno--;
 	});
+
 
 })//function ready end
