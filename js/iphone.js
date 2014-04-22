@@ -1,28 +1,54 @@
 $(document).ready(function(){
 	$('.tab-lib').click(function(){
-		$('.tab').find('.tab-selected').removeClass('.tab-selected');
-		$(this).addClass('.tab-selected');
+		$('.tab-selected').removeClass('tab-selected');
+		$(this).addClass('tab-selected');
 		$('.content-page').hide();
 		$('#page-lib').show();
+		$('.header p').text("Library");
 	});
 	$('.tab-worm').click(function(){
-		$('.tab').find('.tab-selected').removeClass('.tab-selected');
-		$(this).addClass('.tab-selected');
+		$('.tab-selected').removeClass('tab-selected');
+		$(this).addClass('tab-selected');
 		$('.content-page').hide();
 		$('#page-worm').show();
+		$('.header p').text("BookWorm");
 	});
 	$('.tab-news').click(function(){
-		$('.tab').find('.tab-selected').removeClass('.tab-selected');
-		$(this).addClass('.tab-selected');
+		$('.tab-selected').removeClass('tab-selected');
+		$(this).addClass('tab-selected');
 		$('.content-page').hide();
 		$('#page-news').show();
+		$('.header p').text("NewsFeed");
 	});
 	$('.tab-club').click(function(){
-		$('.tab').find('.tab-selected').removeClass('.tab-selected');
-		$(this).addClass('.tab-selected');
+		$('.tab-selected').removeClass('tab-selected');
+		$(this).addClass('tab-selected');
 		$('.content-page').hide();
 		$('#page-club').show();
+		$('.header p').text("BookClub");
 	});
+	$('#menu-home').click(function(){
+		$('.iphone-container').animate({left:'0px'});
+		$('.footer-tab').animate({left:'0px'});
+		$('.header p').animate({marginLeft:'85px'});
+		$('.hidden-menu').animate({left:'-200px'});
+		$('.tab-selected').removeClass('tab-selected');
+		$("tab-lib").addClass('tab-selected');
+		$('.content-page').hide();
+		$('#page-lib').show();
+		$('.header p').text("Library");
+	});
+	$('#menu-profile').click(function(){
+		$('.iphone-container').animate({left:'0px'});
+		$('.footer-tab').animate({left:'0px'});
+		$('.header p').animate({marginLeft:'85px'});
+		$('.hidden-menu').animate({left:'-200px'});
+		$('.tab-selected').removeClass('tab-selected');
+		$('.content-page').hide();
+		$('#page-profile').show();
+		$('.header p').text("Profile");
+	});
+
 
 
 
@@ -63,12 +89,9 @@ $(document).ready(function(){
 			$('.blur-bg').hide();
 			$('.iphone-container').removeClass('blur');
 		}
-		
-		console.log("click");
 	});
 
 	$('.hidden-menu .menu').click(function(){
-		console.log("test");
 		$('.hidden-menu .selected').removeClass('selected');
 		$(this).addClass('selected');
 	});
