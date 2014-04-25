@@ -4,28 +4,28 @@ $(document).ready(function(){
 		$(this).addClass('tab-selected');
 		$('.content-page').hide();
 		$('#page-lib').show();
-		$('.header p').text("Library");
+		$('.header .title').text("Library");
 	});
 	$('.tab-worm').click(function(){
 		$('.tab-selected').removeClass('tab-selected');
 		$(this).addClass('tab-selected');
 		$('.content-page').hide();
 		$('#page-worm').show();
-		$('.header p').text("BookWorm");
+		$('.header .title').text("BookWorm");
 	});
 	$('.tab-news').click(function(){
 		$('.tab-selected').removeClass('tab-selected');
 		$(this).addClass('tab-selected');
 		$('.content-page').hide();
 		$('#page-news').show();
-		$('.header p').text("NewsFeed");
+		$('.header .title').text("NewsFeed");
 	});
 	$('.tab-club').click(function(){
 		$('.tab-selected').removeClass('tab-selected');
 		$(this).addClass('tab-selected');
 		$('.content-page').hide();
 		$('#page-club').show();
-		$('.header p').text("BookClub");
+		$('.header .title').text("BookClub");
 	});
 	$('#menu-home').click(function(){
 		$('.iphone-container').animate({left:'0px'});
@@ -36,7 +36,7 @@ $(document).ready(function(){
 		$("tab-lib").addClass('tab-selected');
 		$('.content-page').hide();
 		$('#page-lib').show();
-		$('.header p').text("Library");
+		$('.header .title').text("Library");
 	});
 	$('#menu-profile').click(function(){
 		$('.iphone-container').animate({left:'0px'});
@@ -46,7 +46,13 @@ $(document).ready(function(){
 		$('.tab-selected').removeClass('tab-selected');
 		$('.content-page').hide();
 		$('#page-profile').show();
-		$('.header p').text("Profile");
+		$('.header .title').text("Profile");
+	});
+	$('.book').click(function(){
+		$('.tab-selected').removeClass('tab-selected');
+		$('.content-page').hide();
+		$('#page-book').show();
+		$('.header .title').text("Book");
 	});
 
 
@@ -56,14 +62,17 @@ $(document).ready(function(){
 		if ($('.iphone-container').css("left")=='0px') {
 			$('.iphone-container').animate({left:'200px'});
 			$('.footer-tab').animate({left:'200px'});
-			$('.header p').animate({marginLeft:'10px'});
 			$('.hidden-menu').animate({left:'0px'});
 		}else{
 			$('.iphone-container').animate({left:'0px'});
 			$('.footer-tab').animate({left:'0px'});
-			$('.header p').animate({marginLeft:'85px'});
 			$('.hidden-menu').animate({left:'-200px'});
 		}
+	});
+	$('.add-btn').click(function(){
+		$('.content-page').hide();
+		$('#page-addbook').show();
+		$('.header .title').text("Add Book");
 	});
 
 	$('.circle-tab').click(function(){
@@ -154,7 +163,7 @@ $(document).ready(function(){
 		$('.info .status').addClass('green');
 		$('.info .status').text('Full');
 		$('.add-food p').text('Food: ' + pageno + ' pages left.');
-		$('.food').animate({right:'192px',top:'-66px'},500,function(){$('.food').css("opacity",0).css("right","48px").css("top","16px").css("opacity",1);});
+		$('.food').animate({right:'185px',top:'-60px'},500,function(){$('.food').css("opacity",0).css("right","48px").css("top","16px").css("opacity",1);});
 		pageno--;
 	});
 
